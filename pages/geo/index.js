@@ -9,7 +9,7 @@ function Geo({ geoData }) {
  
     return(
         <div className="coin_app">
-            <GeoSearch />
+            <GeoSearch type='text' placeholder='Search IP' />
             <GeoList coinsData={geoData} />
         </div>
     )

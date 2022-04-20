@@ -9,6 +9,12 @@
 body {
   background-color: #101012;
 }
+.admin_page {
+  margin: 20px;
+}
+.admin_page a{
+  margin-left: 10px
+}
 .coin__app {
   display: flex;
   flex-direction: column;
