@@ -1,10 +1,12 @@
+import CoinList from "../../components/CoinsList";
+
 function Coins({ coinsData }) {
 
     console.log(coinsData)
 
     return(
         <div>
-            Hello World
+            <CoinList coinsData={coinsData} />
         </div>
     )
 }
