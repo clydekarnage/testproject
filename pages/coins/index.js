@@ -1,12 +1,21 @@
 import CoinList from "../../components/CoinsList";
+import CoinsSearch from "../../components/CoinsSearch";
+import { useState } from "react";
 
 function Coins({ coinsData }) {
+    const [search, setSearch] = useState('');
 
-    console.log(coinsData)
+    const filteredCoins = coinsData.filter(coin => coin.name.toLowerCase().includes(search.toLowerCase()));
 
+    const handleChange = e => {
+        e.preventDefault();
+        setSearch(e.target.value.toLowerCase());
+    }
+ 
     return(
-        <div>
-            <CoinList coinsData={coinsData} />
+        <div className="coin_app">
+            <CoinsSearch type='text' placeholder='Search Coins' onChange={handleChange} />
+            <CoinList coinsData={filteredCoins} />
         </div>
     )
 }
